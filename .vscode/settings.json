@@ -1,0 +1,10 @@
+{
+  "cSpell.words": [
+    "stylelint",
+    "vite",
+    "vitejs"
+],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": true
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+
+    /* Strict Type-Checking Options */
+    /* 启用所有严格类型检查选项。
+       启用 --strict相当于启用 --noImplicitAny, --noImplicitThis, --alwaysStrict， --strictNullChecks和 --strictFunctionTypes和--strictPropertyInitialization。
+    */
+    // --noImplicitAny:在表达式和声明上有隐含的 any类型时报错。
+    // --noImplicitThis:当 this表达式的值为 any类型的时候，生成一个错误。
+    // --alwaysStrict:以严格模式解析并为每个源文件生成 "use strict"语句
+    // --strictNullChecks:在严格的 null检查模式下， null和 undefined值不包含在任何类型里，只允许用它们自己和 any来赋值（有个例外， undefined可以赋值到 void）。
+    // --strictFunctionTypes:禁用函数参数双向协变检查。
+    // --strictPropertyInitialization:确保类的非undefined属性已经在构造函数里初始化。若要令此选项生效，需要同时启用--strictNullChecks。
+    "strict": true,
+
+    /* Additional Checks */
+    "noUnusedLocals": true, // 若有未使用的局部变量则抛错。
+    "noUnusedParameters": true, // 若有未使用的参数则抛错。
+    "noImplicitReturns": true, // 不是函数的所有返回路径都有返回值时报错。
+    "noFallthroughCasesInSwitch": true, // 报告switch语句的fallthrough错误。（即，不允许switch的case语句贯穿）
+
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "types": ["vite/client"],
+    "allowJs": false,
+    "skipLibCheck": false,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["./src"]
+}
