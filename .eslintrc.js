@@ -4,7 +4,6 @@ module.exports = {
         es2021: true
     },
     extends: ['airbnb', 'plugin:react/recommended', 'plugin:@typescript-eslint/recommended', 'prettier'],
-    parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaFeatures: {
             jsx: true
@@ -12,9 +11,13 @@ module.exports = {
         ecmaVersion: 12,
         sourceType: 'module'
     },
-    plugins: ['react', '@typescript-eslint'],
+    plugins: ['import', 'react', '@typescript-eslint'],
     settings: {
+        'import/parsers': {
+            '@typescript-eslint/parser': ['.ts', '.tsx']
+        },
         'import/resolver': {
+            typescript: {},
             node: {
                 // 指定 eslint-plugin-import 解析的后缀名
                 extensions: ['.ts', '.tsx', '.js', '.json']
